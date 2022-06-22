@@ -38,9 +38,9 @@ jobs:
           flutter-version: '2.10.2'
           channel: 'stable'
 #           cache: true
-      - run: rm Podfile.lock
       - run: flutter pub get
       - run: cd ios
+      - run: rm Podfile.lock
       - run: pod install --repo-update
       # Build ipa.
       - run: flutter build ipa
